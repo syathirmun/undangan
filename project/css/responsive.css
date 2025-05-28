@@ -1,0 +1,179 @@
+/* Responsive Styles */
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .heart-text {
+    font-size: 2.5rem;
+  }
+  
+  .heart {
+    font-size: 3rem;
+  }
+  
+  .countdown {
+    gap: var(--space-sm);
+  }
+  
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .envelope {
+    width: 280px;
+    height: 190px;
+  }
+  
+  .events-container, 
+  .couple-container,
+  .gift-options {
+    gap: var(--space-md);
+  }
+  
+  .person-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-sm);
+  }
+  
+  .gallery-item {
+    height: 140px;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .heart-text {
+    font-size: 3rem;
+  }
+  
+  .heart {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+  
+  .envelope {
+    width: 300px;
+    height: 210px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    padding: var(--space-lg);
+  }
+  
+  .heart-text {
+    font-size: 3.5rem;
+  }
+  
+  .heart {
+    font-size: 4rem;
+  }
+  
+  .couple-container,
+  .events-container {
+    gap: var(--space-xl);
+  }
+  
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gallery-item {
+    height: 250px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: var(--space-xxl) 0;
+  }
+  
+  .countdown {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .envelope {
+    transform: scale(0.8);
+  }
+  
+  .envelope-wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .hero {
+    height: auto;
+    background-image: none;
+    color: black;
+  }
+  
+  .hero-overlay {
+    display: none;
+  }
+  
+  .couple-names, .wedding-date, .save-the-date {
+    color: var(--primary-color);
+    opacity: 1;
+    animation: none;
+  }
+  
+  .countdown-container {
+    display: none;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 2cm;
+  }
+  
+  .btn-open, .btn-submit, .btn-gift {
+    display: none;
+  }
+  
+  .footer {
+    background-color: white;
+    color: black;
+    border-top: 1px solid #ddd;
+  }
+}
